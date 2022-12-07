@@ -3,6 +3,7 @@ import React from 'react'
 function Blog() {
   var [posts,setPosts] = React.useState([]);
   var [newpost,setNewpost] = React.useState({thought:'',url:'',date:null,tags:null,author:'',likes:0,comments:[]})
+  const [selectedPost, setSelectedPost] = React.useState(null)
   function handleThought(e){
     setNewpost({...newpost,thought:e.target.value})
   }
@@ -15,8 +16,16 @@ function Blog() {
   console.log(posts);
   function getDate(d){
     var postDate = new Date(d);
-
     return postDate.toTimeString()
+  }
+  function deletePost(index){
+    setSelectedPost(index)
+    setTimeout(()=>{
+      var temp = [...posts];
+      temp.splice(index,1);
+      setPosts([...temp]);
+      setSelectedPost(null)
+    },1000)
   }
   return (
     <div>
@@ -34,13 +43,14 @@ function Blog() {
       <div>
         <ul>
           {
-            posts.map((post)=>{
-              return <li className='d-flex'>
+            posts.map((post,i)=>{
+              return <li className={selectedPost===i?'d-flex animate__animated animate__hinge':'d-flex animate__animated animate__fadeInUp'}>
                   <img src={post.url} alt="" className='w-25 border border-2 p-2 m-2'/>
                   <div>
                     <h1>{post.author}</h1>
                     <h5>{getDate(post.date)}</h5>
                     <p>{post.thought}</p>
+                    <button onClick={()=>{deletePost(i)}}>Delete</button>
                   </div>
                 </li>
             })
