@@ -36,12 +36,15 @@ function Blog() {
         <ul>
           {
             posts.map((post,i)=>{
-              return <li className='d-flex animate__animated animate__fadeInUp'>
+              return <li className='d-flex animate__animated animate__fadeInUp position-relative'>
                   <img src={post.url} alt="" className='w-25 border border-2 p-2 m-2'/>
                   <div>
                     <h1>{post.author}</h1>
                     <h5>{getDate(post.date)}</h5>
                     <p>{post.thought}</p>
+                  </div>
+                  <div className='position-absolute top-0 end-0'>
+                    <button>delete</button>
                   </div>
                 </li>
             })
