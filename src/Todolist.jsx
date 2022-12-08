@@ -37,13 +37,15 @@ function Todolist() {
       <ul>
         {
           todos.map((todo,i)=>{
-            return <li className={(todo.status===true)?'text-decoration-line-through':''}>
-              {todo.title}
-              {
-                todo.status===true
-                ?(<button onClick={()=>{undoTask(i)}}>Undo</button>)
-                :(<button onClick={()=>{doneTask(i)}}>Done</button>)}
-              <button onClick={()=>{delTodo(i)}}>Del</button>
+            return <li className='d-flex'>
+              <div className={(todo.status===true)?'strike':''}>{todo.title}</div>
+              <div>
+                {
+                  todo.status===true
+                  ?(<button onClick={()=>{undoTask(i)}}>Undo</button>)
+                  :(<button onClick={()=>{doneTask(i)}}>Done</button>)}
+                <button onClick={()=>{delTodo(i)}}>Del</button>
+              </div>
             </li>
           })
         }
