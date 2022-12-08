@@ -1,5 +1,6 @@
 import React,{useState} from 'react'
 import {motion} from 'framer-motion'
+import Todo from './Todo'
 function Todolist() {
   const [todos, setTodos] = useState([
                                         {title:'clear junk',status:false},
@@ -37,17 +38,7 @@ function Todolist() {
       <ul>
         {
           todos.map((todo,i)=>{
-            return <motion.li className='d-flex' initial={{x:-40}} animate={{ x: 4 }}
-            transition={{ ease: "easeOut", duration: i+1 }}>
-              <div className={(todo.status===true)?'strike':''}>{todo.title}</div>
-              <div>
-                {
-                  todo.status===true
-                  ?(<button onClick={()=>{undoTask(i)}}>Undo</button>)
-                  :(<button onClick={()=>{doneTask(i)}}>Done</button>)}
-                <button onClick={()=>{delTodo(i)}}>Del</button>
-              </div>
-            </motion.li>
+            return <Todo todo={todo} undoTask={undoTask} doneTask={doneTask} delTodo={delTodo} i={i} key={todo.title}></Todo>
           })
         }
       </ul>
