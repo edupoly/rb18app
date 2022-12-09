@@ -1,5 +1,4 @@
 import React,{useState} from 'react'
-import {motion} from 'framer-motion'
 import Todo from './Todo'
 function Todolist() {
   const [todos, setTodos] = useState([
