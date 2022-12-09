@@ -1,4 +1,5 @@
 import React,{useState} from 'react'
+import Todo from './Todo'
 
 function Todolist() {
   const [todos, setTodos] = useState(['clear junk','purchase fruits'])
@@ -14,6 +15,7 @@ function Todolist() {
     temp.splice(index,1)
     setTodos([...temp])
   }
+  
   return (
     <div className='border border-info border-3 p-2'>
       <h1>Todolist</h1>
@@ -22,10 +24,7 @@ function Todolist() {
       <ul>
         {
           todos.map((todo,i)=>{
-            return <li>
-              {todo}
-              <button onClick={()=>{delTodo(i)}}>Del</button>
-            </li>
+            return <Todo todo={todo} delTodo={delTodo} i={i}></Todo>
           })
         }
       </ul>
@@ -34,3 +33,4 @@ function Todolist() {
 }
 
 export default Todolist
+
