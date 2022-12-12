@@ -1,21 +1,21 @@
 import React, { useEffect } from 'react'
 import { motion,AnimatePresence } from 'framer-motion'
-function Todo({todo,undoTask,doneTask,delTodo,i}) {
+function Todo({status,title,id,undoTask,doneTask,delTodo,i}) {
   React.useEffect(()=>{
-    alert(todo.title+'empty array use effect')
-    return ()=>{alert('returned function inside empty array')}
+    console.log(title+"mounted")
+    return ()=>{console.log('returned function inside empty array')}
   },[]);
   React.useEffect(()=>{
-    alert(todo.title+'no use effect')
+    console.log(title+"rendered")
   });
   return (
     <AnimatePresence>
-      <motion.li className='d-flex border border-2 border-danger p-2 m-2' key={i} initial={{x:-40}} animate={{ x: 4 }}
-      transition={{ ease: "easeOut", duration: i*2+1 }} exit={{opacity:0,duration:2+i}} >
-        <div className={(todo.status===true)?'strike':''}>{todo.title}</div>
+      <motion.li className='d-flex border border-2 border-danger p-2 m-2' key={id} initial={{x:-40}} animate={{ x: 10 }}
+      transition={{ ease: "easeOut", duration: i*2+1 }} exit={{opacity:0,duration:3}} >
+        <div className={(status===true)?'strike':''}>{title}</div>
         <div>
           {
-            todo.status===true
+            status===true
             ?(<button onClick={()=>{undoTask(i)}}>Undo</button>)
             :(<button onClick={()=>{doneTask(i)}}>Done</button>)}
           <button onClick={()=>{delTodo(i)}}>Del</button>
@@ -25,4 +25,4 @@ function Todo({todo,undoTask,doneTask,delTodo,i}) {
   )
 }
 
-export default Todo
+export default React.memo(Todo)
