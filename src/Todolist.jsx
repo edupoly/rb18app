@@ -2,6 +2,7 @@ import React,{useState} from 'react'
 import {motion} from 'framer-motion'
 import Todo from './Todo'
 function Todolist() {
+  alert("Todo list rendered")
   const [todos, setTodos] = useState([
                                         {title:'clear junk',status:false},
                                         {title:'purchase fruits',status:false},
@@ -35,7 +36,7 @@ function Todolist() {
       <h1>Todolist</h1>
       <input type="text" onChange={handleChange}/>
       <button onClick={addTodo}>Add Todo</button>
-      <ul>
+      <ul className='p-0'>
         {
           todos.map((todo,i)=>{
             return <Todo todo={todo} undoTask={undoTask} doneTask={doneTask} delTodo={delTodo} i={i} key={todo.title}></Todo>
