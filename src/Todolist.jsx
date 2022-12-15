@@ -4,17 +4,18 @@ import Todo from './Todo'
 function Todolist() {
   const [todos, setTodos] = useState(['clear junk','purchase fruits'])
   const [newtodo, setNewtodo] = useState('')
+  console.log('todolist rendered')
   function handleChange(e){
     setNewtodo(e.target.value)
   }
   function addTodo(){
     setTodos([...todos,newtodo])
   }
-  function delTodo(index){
+  var delTodo=React.useCallback((index)=>{
     var temp = [...todos];
     temp.splice(index,1)
     setTodos([...temp])
-  }
+  },[])
   
   return (
     <div className='border border-info border-3 p-2'>
