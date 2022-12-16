@@ -1,5 +1,6 @@
 import React,{useState} from 'react'
-import {motion} from 'framer-motion'
+import {motion} from 'framer-motion';
+import './Todolist.css'
 import Todo from './Todo'
 function Todolist() {
   alert("Todo list rendered")
@@ -32,7 +33,7 @@ function Todolist() {
     setTodos([...temp])
   }
   return (
-    <div className='border border-info border-3 p-2'>
+    <div className='border m-4 border-info border-3 p-2 myshadow'>
       <h1>Todolist</h1>
       <input type="text" onChange={handleChange}/>
       <button onClick={addTodo}>Add Todo</button>
