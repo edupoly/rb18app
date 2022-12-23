@@ -8,15 +8,38 @@ import {
     RouterProvider,
 } from "react-router-dom";
 import Mypage from './Mypage';
+import Products from './products';
+import Productmaster from './Productmaster';
+import ProductDetails from './ProductDetails';
+import Productmaster2 from './ProductMaster2';
 
 const router = createBrowserRouter([
     {
         path:'/',
         element:<App></App>,
         children:[{
-            path:'/yourpage',
-            element:<Mypage></Mypage>
-        }]
+                path:'/yourpage',
+                element:<Mypage></Mypage>
+            },
+            {
+                path:'/products',
+                element:<Productmaster></Productmaster>
+            },
+            {
+                path:'/productDetails/:id/:price',
+                element:<ProductDetails></ProductDetails>
+            },
+            {
+                path:'/products2',
+                element:<Productmaster2></Productmaster2>,
+                children:[
+                    {
+                        path:'/products2/:id',
+                        element:<ProductDetails></ProductDetails>
+                    }
+                ]
+            }
+        ]
     },
     {
         path:'/mypage',
