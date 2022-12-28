@@ -1,5 +1,7 @@
 import React,{useEffect, useState} from 'react'
 import {connect} from 'react-redux'
+import { addTodoItem, deleteTodoItem } from '../store/actions';
+import { getTodos } from '../store/todo.reducer';
 function TodoList(props) {
   console.log("props in TodoList",props)
   const [newtodo, setNewtodo] = useState('');
@@ -26,12 +28,12 @@ function TodoList(props) {
   )
 }
 function mapStateToProps(state){
-  return state.todos
+  return getTodos(state)
 }
 function mapDispatchToProps(dispatch){
   return {
-    addTodo:(todo)=>{dispatch({type:'ADDTODO',payload:todo})},
-    deleteTodo:(ind)=>{dispatch({type:'DELTODO',payload:ind})}
+    addTodo:(todo)=>{dispatch(addTodoItem(todo))},
+    deleteTodo:(ind)=>{dispatch(deleteTodoItem(ind))}
   }
 }
 export default connect(mapStateToProps,mapDispatchToProps)(TodoList)

@@ -14,5 +14,8 @@ const counterReducer = (state=initialState,action)=>{
   }
   return state
 }
-
+export const getCounter = (state)=>{
+  console.log("getCouter selector called....")
+  return state.counter
+}
 export default counterReducer;

@@ -1,7 +1,9 @@
+import { createSelector } from 'reselect';
 const initialState = {
   todos:[
     'clear bills',
-    'book resort'
+    'book resort',
+    'pay rent'
   ]
 }
 const todoReducer = (state=initialState,action)=>{
@@ -15,5 +17,9 @@ const todoReducer = (state=initialState,action)=>{
   }
   return state
 }
-
+const allTodos = (state)=>{return state.todos}
+export const getTodos = createSelector(allTodos,(todos)=>{
+  console.log("memorised getTodos")
+  return todos;
+})
 export default todoReducer

@@ -1,5 +1,7 @@
 import React from 'react'
 import {connect} from 'react-redux'
+import { getCounter } from '../store/counter.reducer';
+
 function Counter(props) {
   console.log("props in counter component",props);
   return (
@@ -11,7 +13,7 @@ function Counter(props) {
   )
 }
 function mapStateToProps(state){
-  return state.counter
+  return getCounter(state)
 }
 function mapDispatchToProps(dispatch){
   return {
