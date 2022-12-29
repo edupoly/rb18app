@@ -1,10 +1,19 @@
 import logo from './logo.svg';
 import './App.css';
+import { Provider } from 'react-redux';
+import { store } from './app/store';
+import Counter from './features/Counter/Counter';
+import Todolist from './features/Todolist/Todolist';
+
 function App() {
   return (
-    <div className="border border-2 border-danger p-2 m-2">
-     <h1>Hello WOrld</h1>
-    </div>
+    <Provider store={store}>
+      <div className="border border-2 border-info p-2 m-2">
+      <h1>Hello WOrld</h1>
+      <Counter></Counter>
+      <Todolist></Todolist>
+      </div>
+    </Provider>
   );
 }
 
