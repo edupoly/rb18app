@@ -14,8 +14,9 @@ function App() {
       <h1>Hello WOrld</h1>
       {/* <Counter></Counter>
       <Todolist></Todolist>
-      <Product></Product> */}
-      <Countries></Countries>
+       */}
+      {/* <Countries></Countries> */}
+      <Product></Product>
       </div>
     </Provider>
   );
