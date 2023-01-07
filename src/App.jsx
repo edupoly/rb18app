@@ -1,22 +1,18 @@
-import logo from './logo.svg';
 import './App.css';
 import { Provider } from 'react-redux';
 import { store } from './app/store';
-import Counter from './features/Counter/Counter';
-import Todolist from './features/Todolist/Todolist';
-import Product from './features/Product/Product';
-import Countries from './features/Countries/Countries';
+import FoodItems from './features/FoodItems/Fooditems';
+import Header from './features/Header/Header';
+import { Outlet } from 'react-router-dom';
 
 function App() {
   return (
     <Provider store={store}>
-      <div className="border border-2 border-info p-2 m-2">
-      <h1>Hello WOrld</h1>
-      {/* <Counter></Counter>
-      <Todolist></Todolist>
-       */}
-      {/* <Countries></Countries> */}
-      <Product></Product>
+      <div>
+        <Header></Header>
+        <div className="container">
+          <Outlet></Outlet>
+        </div>
       </div>
     </Provider>
   );

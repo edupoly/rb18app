@@ -1,4 +1,221 @@
 {
+  "fooditems": [
+    {
+      "id": "l8a7ei50etbtcl6ukm",
+      "strMeal": "Baingan Bharta",
+      "strMealThumb": "https://www.themealdb.com/images/media/meals/urtpqw1487341253.jpg",
+      "price": 80,
+      "category": "veg"
+    },
+    {
+      "id": "l8a7f43evdvzgvtk25m",
+      "strMeal": "Chicken Handi",
+      "strMealThumb": "https://www.themealdb.com/images/media/meals/wyxwsp1486979827.jpg",
+      "price": 240,
+      "category": "non-veg"
+    },
+    {
+      "id": "l8a7gyu9syntnzo5p8t",
+      "strMeal": "Dal fry",
+      "strMealThumb": "https://www.themealdb.com/images/media/meals/wuxrtu1483564410.jpg",
+      "price": 120,
+      "category": "veg"
+    },
+    {
+      "id": "l8a7i9fujgere08eite",
+      "strMeal": "Kidney Bean Curry",
+      "strMealThumb": "https://www.themealdb.com/images/media/meals/sywrsu1511463066.jpg",
+      "price": 140,
+      "category": "veg"
+    },
+    {
+      "id": "l8a7j5x2rmk250lc0j9",
+      "strMeal": "Lamb Biryani",
+      "strMealThumb": "https://www.themealdb.com/images/media/meals/xrttsx1487339558.jpg",
+      "price": 320,
+      "category": "non-veg"
+    },
+    {
+      "id": "l8a7jnwrrvih1g4c85k",
+      "strMeal": "Lamb Rogan josh",
+      "strMealThumb": "https://www.themealdb.com/images/media/meals/vvstvq1487342592.jpg",
+      "price": 340,
+      "category": "non-veg"
+    },
+    {
+      "id": "l8a7k6oa84doefvixj",
+      "strMeal": "Matar Paneer",
+      "strMealThumb": "https://www.themealdb.com/images/media/meals/xxpqsy1511452222.jpg",
+      "price": 180,
+      "category": "veg"
+    },
+    {
+      "id": "l8a7kzoy3owhp4y2ksb",
+      "strMeal": "Nutty Chicken Curry",
+      "strMealThumb": "https://www.themealdb.com/images/media/meals/yxsurp1511304301.jpg",
+      "price": 260,
+      "category": "non-veg"
+    },
+    {
+      "id": "l8a7lxa2nvbuh3y089b",
+      "strMeal": "Recheado Masala Fish",
+      "strMealThumb": "https://www.themealdb.com/images/media/meals/uwxusv1487344500.jpg",
+      "price": 220,
+      "category": "non-veg"
+    },
+    {
+      "id": "l8a7rjk4eb83u5hv3oj",
+      "strMeal": "Smoked Haddock Kedgeree",
+      "strMealThumb": "https://www.themealdb.com/images/media/meals/1550441275.jpg",
+      "price": 240,
+      "category": "non-veg"
+    },
+    {
+      "id": "l8a7s6wb31nrbpzo0yv",
+      "strMeal": "Tandoori chicken",
+      "strMealThumb": "https://www.themealdb.com/images/media/meals/qptpvt1487339892.jpg",
+      "price": 260,
+      "category": "non-veg"
+    },
+    {
+      "strMeal": "chicken65",
+      "strMealThumb": "https://img.freepik.com/free-photo/baked-chicken-wings-asian-style_2829-10159.jpg?w=1480&t=st=1673023952~exp=1673024552~hmac=36b479ae2b367f0b3d03ec76447f36ea8c97f2f4314b43a6758b6494085f3fd9",
+      "price": "200",
+      "category": "nonveg",
+      "id": "ndcPL4t"
+    },
+    {
+      "strMeal": "Dosa",
+      "strMealThumb": "https://img.freepik.com/free-photo/delicious-indian-dosa-arrangement_23-2149086024.jpg?w=1380&t=st=1673063141~exp=1673063741~hmac=24834694b00b68e280d1398073d07b92140a172842eb5cb048a0fb03f638867b",
+      "price": "45",
+      "category": "veg",
+      "id": "VoKH80d"
+    }
+  ],
+  "bills": [
+    {
+      "billtime": 1673014572751,
+      "billItems": [
+        {
+          "id": "l8a7gyu9syntnzo5p8t",
+          "strMeal": "Dal fry",
+          "strMealThumb": "https://www.themealdb.com/images/media/meals/wuxrtu1483564410.jpg",
+          "price": 120,
+          "category": "veg"
+        },
+        {
+          "id": "l8a7i9fujgere08eite",
+          "strMeal": "Kidney Bean Curry",
+          "strMealThumb": "https://www.themealdb.com/images/media/meals/sywrsu1511463066.jpg",
+          "price": 140,
+          "category": "veg"
+        },
+        {
+          "id": "l8a7ei50etbtcl6ukm",
+          "strMeal": "Baingan Bharta",
+          "strMealThumb": "https://www.themealdb.com/images/media/meals/urtpqw1487341253.jpg",
+          "price": 80,
+          "category": "veg"
+        }
+      ],
+      "id": 1
+    },
+    {
+      "billtime": 1673014681149,
+      "billItems": [
+        {
+          "id": "l8a7ei50etbtcl6ukm",
+          "strMeal": "Baingan Bharta",
+          "strMealThumb": "https://www.themealdb.com/images/media/meals/urtpqw1487341253.jpg",
+          "price": 80,
+          "category": "veg"
+        },
+        {
+          "id": "l8a7jnwrrvih1g4c85k",
+          "strMeal": "Lamb Rogan josh",
+          "strMealThumb": "https://www.themealdb.com/images/media/meals/vvstvq1487342592.jpg",
+          "price": 340,
+          "category": "non-veg"
+        }
+      ],
+      "id": 2
+    },
+    {
+      "billtime": 1673014756548,
+      "billItems": [
+        {
+          "id": "l8a7gyu9syntnzo5p8t",
+          "strMeal": "Dal fry",
+          "strMealThumb": "https://www.themealdb.com/images/media/meals/wuxrtu1483564410.jpg",
+          "price": 120,
+          "category": "veg"
+        },
+        {
+          "id": "l8a7j5x2rmk250lc0j9",
+          "strMeal": "Lamb Biryani",
+          "strMealThumb": "https://www.themealdb.com/images/media/meals/xrttsx1487339558.jpg",
+          "price": 320,
+          "category": "non-veg"
+        },
+        {
+          "id": "l8a7f43evdvzgvtk25m",
+          "strMeal": "Chicken Handi",
+          "strMealThumb": "https://www.themealdb.com/images/media/meals/wyxwsp1486979827.jpg",
+          "price": 240,
+          "category": "non-veg"
+        }
+      ],
+      "id": 3
+    },
+    {
+      "billtime": 1673014786332,
+      "billItems": [
+        {
+          "id": "l8a7gyu9syntnzo5p8t",
+          "strMeal": "Dal fry",
+          "strMealThumb": "https://www.themealdb.com/images/media/meals/wuxrtu1483564410.jpg",
+          "price": 120,
+          "category": "veg"
+        },
+        {
+          "id": "l8a7f43evdvzgvtk25m",
+          "strMeal": "Chicken Handi",
+          "strMealThumb": "https://www.themealdb.com/images/media/meals/wyxwsp1486979827.jpg",
+          "price": 240,
+          "category": "non-veg"
+        }
+      ],
+      "id": 4
+    },
+    {
+      "billtime": 1673015818556,
+      "billItems": [
+        {
+          "id": "l8a7gyu9syntnzo5p8t",
+          "strMeal": "Dal fry",
+          "strMealThumb": "https://www.themealdb.com/images/media/meals/wuxrtu1483564410.jpg",
+          "price": 120,
+          "category": "veg"
+        },
+        {
+          "id": "l8a7f43evdvzgvtk25m",
+          "strMeal": "Chicken Handi",
+          "strMealThumb": "https://www.themealdb.com/images/media/meals/wyxwsp1486979827.jpg",
+          "price": 240,
+          "category": "non-veg"
+        },
+        {
+          "id": "l8a7ei50etbtcl6ukm",
+          "strMeal": "Baingan Bharta",
+          "strMealThumb": "https://www.themealdb.com/images/media/meals/urtpqw1487341253.jpg",
+          "price": 80,
+          "category": "veg"
+        }
+      ],
+      "id": 5
+    }
+  ],
+  "orders": [],
   "posts": [
     {
       "id": 1,
