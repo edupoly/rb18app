@@ -1,5 +1,4 @@
 import { configureStore } from "@reduxjs/toolkit";
-
 import counterReducer from '../features/Counter/counterSlice'
 import todolistReducer from '../features/Todolist/todolistSlice';
 import billReducer from '../features/Bill/billSlice'
